@@ -1,5 +1,5 @@
 # char-frequency
-Для работы с приложение достаточно сделать post-запрос по адресу /string/find-frequency с json-телом :
+Для работы с приложением достаточно сделать post-запрос по адресу /string/find-frequency с json-телом :
 ```json
 {
     "string" : "aaaaabcccc"
