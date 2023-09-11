@@ -1,5 +1,6 @@
 package com.asayke.service.implementation;
 
+import com.asayke.exception.InputStringIsEmptyException;
 import com.asayke.service.FrequencyService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,8 @@ import java.util.*;
 public class FrequencyServiceImplementation implements FrequencyService {
     @Override
     public List<Map.Entry<Character, Integer>> findCharFrequency(String string) {
+        if (string.isEmpty()) throw new InputStringIsEmptyException("Input string is empty");
+
         Map<Character, Integer> frequencyMap = new HashMap<>();
 
         for (char c : string.toCharArray()) {
