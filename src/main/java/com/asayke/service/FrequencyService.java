@@ -1,7 +1,8 @@
 package com.asayke.service;
 
+import java.util.List;
 import java.util.Map;
 
 public interface FrequencyService {
-    Map<Character, Integer> findCharFrequency(String string);
+    List<Map.Entry<Character, Integer>> findCharFrequency(String string);
 }
